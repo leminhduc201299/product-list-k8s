@@ -1,0 +1,26 @@
+apiVersion: k8s.nginx.org/v1
+kind: VirtualServerRoute
+metadata:
+  name: test-vsr
+  namespace: nginx-ingress
+spec:
+  host: localhost
+  ingressClassName: lmduc-nginx-ingress
+  subroutes:
+  - path: /test-api/
+    action:
+      proxy:
+        rewritePath: /
+        upstream: test-api-svc
+  - path: /
+    action:
+      proxy:
+        rewritePath: /
+        upstream: test-fe-svc
+  upstreams:
+  - name: test-api-svc
+    service: test-api-svc
+    port: 80
+  - name: test-fe-svc
+    service: test-fe-svc
+    port: 80

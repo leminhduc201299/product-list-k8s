@@ -1,0 +1,125 @@
+.content {
+    position: absolute;
+    top: 49px;
+    left: 200px;
+    width: calc(100% - 200px - 32px);
+    height: calc(100vh - 49px - 32px);
+    padding: 16px;
+    box-shadow: inset 0px 1.5px 2px 0px rgb(0 0 0 / 10%);
+}
+
+.content .search-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.content .search-bar .search-left {
+
+}
+
+.content .search-bar .search-right {
+    position: absolute;
+    right: 16px;
+    display: flex;
+}
+
+/* .content .search-bar .m-combobox {
+    margin-left: 10px;
+} */
+
+/* Phần chứa bảng */
+.content .gird {
+    width: 100%;
+    height: calc(100vh - 170px);
+    border-bottom: 1px solid #e5e5e5;
+
+    overflow-y: auto;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+/* Thông báo không có dữ liệu */
+.content .m-nodata {
+    color: #808080;
+    padding: 20px 10px;
+    line-height: 1px;
+    border: none;
+}
+
+/* Phần phân trang */
+.content .navigation {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation .navigation-left {
+    position: absolute;
+    left: 16px;
+    color: #454545;
+    align-self: center;
+    align-items: center;
+    display: flex;
+}
+
+    .navigation .navigation-left .navigation-page {
+        text-align: center;
+        margin-left: 10px;
+    }
+
+
+    .navigation .navigation-left .navigation-change {
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+        border-radius: 14px;
+    }
+    
+    .navigation .navigation-left .navigation-change:hover {
+        cursor: pointer;
+    }
+
+    .navigation .navigation-left .navigation-text {
+        margin-left: 10px;
+    }
+
+.navigation .navigation-right {
+    position: absolute;
+    right: 16px;
+}
+
+.navigation .disable {
+    opacity: 0.5;
+    color: transparent !important;
+    cursor: default !important;
+    background-color: #fff;
+}
+
+.m-more {
+    height: 36px;
+    width: 100px;
+    border-radius: 4px;
+    position: absolute;
+    right: 0;
+    top: 110%;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    border: 1px solid #d5d8e6;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+}
+
+.m-more .m-more-icon {
+    width: 22px;
+    height: 22px;
+    margin: 0 8px;
+}
+
+.m-more .m-more-text {
+    margin-left: 4px;
+    opacity: 0.9;
+}

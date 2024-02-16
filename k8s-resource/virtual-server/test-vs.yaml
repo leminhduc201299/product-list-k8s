@@ -1,0 +1,15 @@
+apiVersion: k8s.nginx.org/v1
+kind: VirtualServer
+metadata:
+  name: test-vs
+  namespace: nginx-ingress
+spec:
+  host: localhost
+  ingressClassName: lmduc-nginx-ingress
+  routes:
+  - path: /
+    route: nginx-ingress/test-vsr
+  tls:
+    secret: test-secret
+    redirect:
+      enable: false
