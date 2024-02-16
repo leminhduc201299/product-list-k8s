@@ -1,0 +1,28 @@
+.m-row {
+    display: flex;
+}
+
+.flex {
+    flex: 1;
+}
+
+.flex-3 {
+    flex: 3;
+}
+.flex-4 {
+    flex: 4;
+}
+.flex-5 {
+    flex: 5;
+}
+
+.m-form-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.pl-25 {
+    padding-left: 25px;
+}

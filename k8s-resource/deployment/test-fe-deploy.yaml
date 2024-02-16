@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-fe
+  namespace: nginx-ingress
+spec:
+  selector:
+    matchLabels:
+      app: test-fe
+  template:
+    metadata:
+      labels:
+        app: test-fe
+    spec:
+      containers:
+      - name: test-fe
+        image: leminhduc201299/test-fe:1.0.0.1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
